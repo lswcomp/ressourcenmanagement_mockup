@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > div {
+    width: 80%;
+    justify-items: left;
+}
+
+.raumContainer {
+    text-align: center;
+}
+
+#rootContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

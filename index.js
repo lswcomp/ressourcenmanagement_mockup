@@ -1,13 +1,4 @@
-function initialPageLoad() {
-    console.log("TODO");
-}
-
-function renderTime(element) {
-    let date = new Date();
-    element.innerHTML = date.toLocaleTimeString() + " " + date.toLocaleDateString();
-}
-
+let date = new Date();
 let timer = document.getElementById("timestampParagraph");
 
-renderTime(timer);
-setInterval(renderTime, 1000, timer);
+timer.innerText = date.toLocaleDateString();
