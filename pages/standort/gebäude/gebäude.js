@@ -16,7 +16,7 @@ let raum101 = document.getElementById("raum1Status");
 
 console.log(raum101.id);
 
-if (localStorage.getItem(raum101.id) === "gebucht") {
+if (localStorage.getItem(raum101.children[0].id) === "gebucht") {
     console.log("bdsfha");
     raum101.innerHTML = "<p>gebucht</p>";
 }
