@@ -10,6 +10,11 @@ nav > div {
 
 .raumContainer {
     text-align: center;
+    border: 2px solid black;
+    width: 50%;
+    height: 70%;
+    justify-self: center;
+    align-self: center;
 }
 
 #rootContainer {

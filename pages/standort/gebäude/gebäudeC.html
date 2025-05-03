@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../base.css">
     <link rel="stylesheet" href="./gebäude.css">
     <script defer src="./gebäude.js"></script>
     <title>Desk Sharing Prototype</title>
 </head>
 <body>
     <header>
-        <h1>Gebäude C</h1>
-        <nav>
+        <h1 class="blue">Gebäude C</h1>
+        <nav class="blue">
             <div>
                 <a href="../../../index.html">Home</a>
                 <a href="../../reporting/reporting.html">Reporting</a>
@@ -21,16 +22,19 @@
     </header>
     <main>
         <label for="stockwerk">Stockwerk</label>
-        <select name="stockwerk" id="stockwerk">
-            <option value="2" onclick="renderStockwerk(2)">2.OG</option>
-            <option value="1" onclick="renderStockwerk(1)">1.OG</option>
-            <option value="0" onclick="renderStockwerk(0)" selected="selected">EG</option>
-            <option value="-1" onclick="renderStockwerk(-1)">1.UG</option>
+        <select name="stockwerk" onchange="renderStockwerk(this.value)" id="stockwerk">
+            <option value="2">2.OG</option>
+            <option value="1">1.OG</option>
+            <option value="0"selected="selected">EG</option>
+            <option value="-1">1.UG</option>
         </select>
         <div id="rootContainer">
-            <div id="raum1" class="raumContainer"></div>
-            <div id="raum2" class="raumContainer"></div>
-            <div id="raum3" class="raumContainer"></div>
+            <div id="raum1" class="raumContainer blue">
+                <h3>Raum 101</h3>
+                <p id="raum1Status"><button id="buttonRaum1" onclick="raumBuchen(this.id)">Buchen</button></p>
+            </div>
+            <div id="raum2" class="raumContainer blue"></div>
+            <div id="raum3" class="raumContainer blue"></div>
         </div>
     </main>
     <footer>
