@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./index.css">
     <script defer src="./index.js"></script>
@@ -10,14 +15,14 @@
 </head>
 <body>
     <header>
-        <h1 class="blue">Index</h1>
-        <nav class="blue">
+        <nav>
+            <img src="./assets/Logo.svg" alt="Logo">
             <div>
-                <a href="./index.html">Home</a>
-                <a href="./pages/reporting/reporting.html">Reporting</a>
-                <a href="./pages/admin/admin.html">Admin</a>
+                <a href="./index.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="./pages/reporting/reporting.html" class=".inter-normal">Administration</a>
+                <a href="./pages/admin/admin.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="toggleMenu()"><img src="./assets/Profil.svg" alt=""><img src="./assets/chevronDown.svg" alt="chevronDown"></button>
             </div>
-            <p id="timestampParagraph">Loading...</p>
         </nav>
     </header>
     <main>
@@ -27,8 +32,5 @@
             <a href="./pages/standort/essen.html"><div class="standortContainer">Essen</div></a>
         </div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

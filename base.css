@@ -24,30 +24,12 @@ body {
     font-style: normal;
 }
 
-a {
+nav > div > a {
     text-decoration: none;
-    text-decoration-color: none;
-}
-
-h1 {
-    text-align: center;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: fit-content;
-    border-radius: 20px;
-}
-
-nav {
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 20px;
-    text-decoration-color: #94B4C1;
-}
-
-.blue {
-    background-color: #3A59D1;
+    cursor: pointer;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
