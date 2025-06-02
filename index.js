@@ -9,6 +9,7 @@ request.onerror = function (event) {
 request.onupgradeneeded = function () {
     const db = request.result;
     const store = db.createObjectStore("buchungen", { keyPath: "id" });
+    store.createIndex("nutzer", ["nutzer"], { unique: true });
     store.createIndex("item", ["item"], { unique: false });
     store.createIndex("tag", ["tag"], { unique: false });
     store.createIndex("zeitstempel", ["zeitstempel"], { unique: true });
@@ -19,14 +20,20 @@ request.onsuccess = function () {
     const transaction = db.transaction("buchungen", "readwrite");
 
     const store = transaction.objectStore("buchungen");
-    const itemIndex = store.index("item");
+    const nutzerIndex = store.index("nutzer");
 
-    store.put({ item: "Tisch 1", tag: "02.06.2025", zeitstempel: "17:26:00"});
+    store.put({ id: 1, nutzer: "Lukas Wala", item: "Tisch 1", tag: "02.06.2025", zeitstempel: "17:26:00"});
 
-    const query = store.getAll(itemIndex);
+    const nutzerQuery = nutzerIndex.getAll(["Lukas Wala"]);
 
-    console.log(query.result);
-}
+    nutzerQuery.onsuccess = function () {
+        console.log('nutzer query', nutzerQuery.result);
+    };
+
+    transaction.oncomplete = function () {
+        db.close();
+    }
+};
 
 function toggleMenu() {
     console.log("toggling menu");
