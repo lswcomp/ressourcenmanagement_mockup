@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../base.css">
+    <link rel="stylesheet" href="./login.css">
+    <script defer src="./login.js"></script>
+    <title>Desk Sharing Prototype</title>
+</head>
+<body>
+    <main>
+        <div id="rootContainer">
+            <img id="logo" src="../../assets/Logo.svg" alt="Logo">
+            <h1 class="inter-bold" id="loginText">Login</h1>
+            <form action="../../index.html" id="loginForm">
+                <label for="benutzername" class="inter-light" style="margin-bottom: 1vh;">Benutzername</label>
+                <input type="text" name="benutzername" id="benutzernameInput">
+                <label for="passwort" class="inter-light" style="margin-top: 3vh; margin-bottom: 1vh;">Passwort</label>
+                <input type="password" name="passwort" id="passwortInput">
+            </form>
+            <div id="pwVergessen">
+                <button id="pwVergessenButton" class="inter-light">Passwort vergessen</button>
+                <img src="../../assets/go-button.svg" alt="go" onclick="window.location.href = '../../index.html';">
+            </div>
+            <div id="spracheContainer">
+                <p class="inter-light">Sprache</p>
+                <select name="sprache"class="inter-light">
+                    <option value="DE">DE</option>
+                    <option value="DE">EN</option>
+                    <option value="DE">FR</option>
+                    <option value="DE">IT</option>
+                    <option value="DE">SP</option>
+                    <option value="DE">CH</option>
+                </select>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

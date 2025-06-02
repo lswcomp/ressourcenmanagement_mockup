@@ -1,0 +1,85 @@
+html {
+    background-color: #FFFFFF;
+}
+
+body {
+    height: 100vh;
+}
+
+#logo {
+    margin-top: 15vh;
+    width: 30vw;
+}
+
+#loginText {
+    font-size: 5vh;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#loginForm {
+    width: 20vw;
+}
+
+#rootContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pwVergessen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 20vw;
+}
+
+#pwVergessen > img {
+    height: 4vh;
+}
+
+#pwVergessenButton {
+    background-color: #E3E3E3;
+    border-radius: 0.75vh;
+    border-style: solid;
+    border-width: 1.5px;
+    height: 70%;
+    padding: 1%;
+    font-size: 1.5vh;
+}
+
+#loginForm > label {
+    display: block;
+    margin-bottom: 0.5%;
+    font-size: 1.5vh;
+}
+
+#loginForm > input {
+    display: block;
+    margin-bottom: 1%;
+    border-radius: 1vh;
+    border-color: #D9D9D9;
+    border-style: solid;
+    border-width: 1.5px;
+    height: 3vh;
+    width: 100%;
+    padding-left: 2%;
+    font-size: large;
+    justify-self: left;
+}
+
+#spracheContainer {
+    width: 20vw;
+}
+
+#spracheContainer > select {
+    border-radius: 0.75vh;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #D9D9D9;
+    padding: 2%;
+    font-size: 1.5vh;
+    width: 50%;
+}
