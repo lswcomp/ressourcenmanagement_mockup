@@ -19,17 +19,20 @@
             <img src="./assets/Logo.svg" alt="Logo">
             <div>
                 <a href="./index.html" class=".inter-normal">Meine Buchungen</a>
-                <a href="./pages/reporting/reporting.html" class=".inter-normal">Administration</a>
-                <a href="./pages/admin/admin.html" class=".inter-normal">Auswertungen</a>
-                <button id="profilButton" onclick="toggleMenu()"><img src="./assets/Profil.svg" alt=""><img src="./assets/chevronDown.svg" alt="chevronDown"></button>
+                <a href="./pages/admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="./pages/reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="window.location.href = `./pages/login/login.html`"><img src="./assets/Profil.svg" alt=""><img src="./assets/chevronDown.svg"></button>
             </div>
         </nav>
     </header>
     <main>
         <div id="rootContainer">
-            <a href="./pages/standort/hamburg.html"><div class="standortContainer">Hamburg</div></a>
-            <a href="./pages/standort/münchen.html"><div class="standortContainer">München</div></a>
-            <a href="./pages/standort/essen.html"><div class="standortContainer">Essen</div></a>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/berlin.html`;"><img src="assets/Berlin.svg" alt=""><h3 class="inter-normal">Berlin</h3><p>500 verfügbare Plätze</p></div>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/düsseldorf.html`;"><img src="assets/Düsseldorf.svg" alt=""><h3 class="inter-normal">Düsseldorf</h3><p>500 verfügbare Plätze</p></div>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/münster.html`;"><img src="assets/Münster.svg" alt=""><h3 class="inter-normal">Münster</h3><p>500 verfügbare Plätze</p></div>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/münchen.html`;"><img src="assets/München.svg" alt=""><h3 class="inter-normal">München</h3><p>500 verfügbare Plätze</p></div>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/frankfurt.html`;"><img src="assets/Frankfurt.svg" alt=""><h3 class="inter-normal">Frankfurt</h3><p>500 verfügbare Plätze</p></div>
+            <div class="standortContainer" onclick="window.location.href = `./pages/standort/hamburg.html`;"><img src="assets/Hamburg.svg" alt=""><h3 class="inter-normal">Hamburg</h3><p>500 verfügbare Plätze</p></div>
         </div>
     </main>
 </body>

@@ -1,18 +1,274 @@
-nav {
-    display: flex;
-    justify-content: space-around;
+.rotSenkrecht {
+    background-color: #CD0F12;
+    border: #000000 solid 1.5px;
+    border-radius: 1vh;
+    height: 15vh;
+    width: 4.5vw;
 }
 
-nav > div {
-    width: 80%;
-    justify-items: left;
+.gruenSenkrecht {
+    background-color: #29A21E;
+    border: #000000 solid 1.5px;
+    border-radius: 1vh;
+    height: 15vh;
+    width: 4.5vw;
 }
 
-.gebäudeContainer {
+.rotWaagrecht {
+    background-color: #CD0F12;
+    border: #000000 solid 1.5px;
+    border-radius: 1vh;
+    height: 9vh;
+    width: 8vw;
+}
+
+.gruenWaagrecht {
+    background-color: #29A21E;
+    border: #000000 solid 1.5px;
+    border-radius: 1vh;
+    height: 9vh;
+    width: 8vw;
+}
+
+.flexSpace {
+    width: 10%;
+}
+
+.konferenzTischrot {
+    background-color: #CD0F12;
+    border: #000000 solid 1.5px;
+    border-radius: 8vh;
+    position: relative;
+    left: 10%;
+    top: 30%;
+    width: 28vw;
+    height: 15vh;
+}
+
+.konferenzTischgruen {
+    background-color: #29A21E;
+    border: #000000 solid 1.5px;
+    border-radius: 8vh;
+    position: relative;
+    left: 10%;
+    top: 30%;
+    width: 28vw;
+    height: 15vh;
+}
+
+#stockwerk {
+    border-radius: 1.5vh;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #D9D9D9;
+    padding: 1vh;
+    font-size: 1.5vh;
+    width: 10vw;
     text-align: center;
+    margin-left: 10vw;
+    background-color: #D9D9D9;
+    appearance: base-select;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 #rootContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-top: 3vh;
+    background-color: #EDEBEB;
+    width: 90vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 19.5vh;
+}
+
+#raum101 {
+    position: relative;
+    border: black solid 2px;
+    height: 35%;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#raum102 {
+    border: #000000 solid 2px;
+    position: relative;
+    left: 9.7%;
+    height: 40%;
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#raum103 {
+    border: #000000 solid 2px;
+    position: relative;
+    height: 40%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#raum104 {
+    border: #000000 solid 2px;
+    border-left: none;
+    position: relative;
+    height: 40%;
+    width: 49.73%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tisch22 {
+    position: relative;
+    left: 5%;
+    top: 3%;
+}
+
+#tisch23 {
+    position: relative;
+    left: 40%;
+    top: 3%;
+}
+
+#tisch24 {
+    position: relative;
+    left: 45%;
+    top: 3%;
+}
+
+#tisch25 {
+    position: relative;
+    left: 5%;
+    top: 4%;
+}
+
+#tisch26 {
+    position: relative;
+    left: 10%;
+    top: 4%;
+}
+
+#tisch27 {
+    position: relative;
+    left: 11%;
+    top: 4%;
+}
+
+#tisch28 {
+    position: relative;
+    left: 30%;
+    top: 4%;
+}
+
+#tisch29 {
+    position: relative;
+    left: 31%;
+    top: 4%;
+}
+
+#tisch30 {
+    position: relative;
+    left: 51%;
+    top: 4%;
+}
+
+#tisch31 {
+    position: relative;
+    left: 10%;
+    top: 7%;
+}
+
+#tisch32 {
+    position: relative;
+    left: 39.3%;
+    top: 7%;
+}
+
+#tisch33 {
+    position: relative;
+    left: 40.3%;
+    top: 7%;
+}
+
+#tisch34 {
+    position: relative;
+    left: 60.3%;
+    top: 7%;
+}
+
+#tisch35 {
+    position: relative;
+    left: 5%;
+    top: 25%;
+}
+
+#tisch36 {
+    position: relative;
+    left: 6%;
+    top: 25%;
+}
+
+#tisch37 {
+    position: relative;
+    left: 40%;
+    top: 25%;
+}
+
+#tisch38 {
+    position: relative;
+    left: 5%;
+}
+
+#tisch39 {
+    position: relative;
+    left: 6%;
+}
+
+#tisch40 {
+    position: relative;
+    left: 40%;
+}
+
+#leinwand {
+    background-color: #898989;
+    border: #000000 solid 1.5px;
+    position: relative;
+    top: 7%;
+    left: 30%;
+    height: 85%;
+    width: 2%;
+}
+
+#beschriftung101 {
+    position: absolute;
+    top: 60vh;
+    left: 28vw;
+    font-size: 3vh;
+}
+
+#beschriftung102 {
+    position: absolute;
+    top: 65vh;
+    left: 58vw;
+    font-size: 3vh;
+}
+
+#beschriftung103 {
+    position: absolute;
+    top: 90vh;
+    left: 40vw;
+    font-size: 3vh;
+}
+
+#beschriftung104 {
+    position: absolute;
+    top: 90vh;
+    left: 53vw;
+    font-size: 3vh;
 }

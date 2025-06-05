@@ -2,6 +2,7 @@ const indexedDB = window.indexedDB;
 
 const request = indexedDB.open("Buchungen", 1);
 
+
 request.onerror = function (event) {
     console.error(event);
 };
@@ -35,6 +36,6 @@ request.onsuccess = function () {
     }
 };
 
-function toggleMenu() {
-    console.log("toggling menu");
+function redirectStandort(standort) {
+    window.location.href = `./pages/standort/${standort}.html`;
 }

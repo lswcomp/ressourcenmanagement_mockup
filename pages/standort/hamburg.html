@@ -10,25 +10,74 @@
 </head>
 <body>
     <header>
-        <h1>Hamburg</h1>
         <nav>
+            <img onclick="window.location.href = `../../index.html`" src="../../assets/Logo.svg" alt="Logo">
             <div>
-                <a href="../../index.html">Home</a>
-                <a href="../reporting/reporting.html">Reporting</a>
-                <a href="../admin/admin.html">Admin</a>
+                <a href="./index.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="./pages/admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="./pages/reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="window.location.href = `../../pages/login/login.html`"><img src="../../assets/Profil.svg" alt=""><img src="../../assets/chevronDown.svg"></button>
             </div>
-            <p id="timestampParagraph">Loading...</p>
         </nav>
     </header>
     <main>
+        <h1 style="text-align: center; font-size: 6vh;" class="inter-bold">Hamburg</h1>
+        <select name="stockwerk" id="stockwerk">
+            <button><selectedcontent style="margin-left: 30%;"></selectedcontent></button>
+            <option value="11.OG">11.OG</option>
+            <option value="12.OG">12.OG</option>
+            <option value="13.OG">13.OG</option>
+            <option value="14.OG">14.OG</option>
+            <option value="15.OG">15.OG</option>
+        </select>
         <div id="rootContainer">
-            <a href="./gebäude/gebäudeA.html"><div class="gebäudeContainer">Gebäude A</div></a>
-            <a href="./gebäude/gebäudeB.html"><div class="gebäudeContainer">Gebäude B</div></a>
-            <a href="./gebäude/gebäudeC.html"><div class="gebäudeContainer">Gebäude C</div></a>
+            <div id="raum101">
+                <div id="tisch22" class="rotSenkrecht"></div>
+                <div id="tisch23" class="rotSenkrecht"></div>
+                <div id="tisch24" class="gruenSenkrecht"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div id="tisch25" class="gruenSenkrecht"></div>
+            </div>
+            <div id="raum102">
+                <div id="tisch26" class="rotSenkrecht"></div>
+                <div id="tisch27" class="rotSenkrecht"></div>
+                <div id="tisch28" class="gruenSenkrecht"></div>
+                <div id="tisch29" class="gruenSenkrecht"></div>
+                <div id="tisch30" class="rotSenkrecht"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div id="tisch31" class="rotSenkrecht"></div>
+                <div id="tisch32" class="gruenSenkrecht"></div>
+                <div id="tisch33" class="gruenSenkrecht"></div>
+                <div id="tisch34" class="rotSenkrecht"></div>
+            </div>
+            <div id="raum103">
+                <div id="tisch35" class="gruenWaagrecht"></div>
+                <div id="tisch36" class="gruenWaagrecht"></div>
+                <div id="tisch37" class="gruenWaagrecht"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div class="flexSpace"></div>
+                <div id="tisch38" class="gruenWaagrecht"></div>
+                <div id="tisch39" class="gruenWaagrecht"></div>
+                <div id="tisch40" class="rotWaagrecht"></div>
+            </div>
+            <div id="raum104">
+                <div class="konferenzTischrot"></div>
+                <div id="leinwand"></div>
+            </div>
+            <p id="beschriftung101" class="inter-normal">Raum 101</p>
+            <p id="beschriftung102" class="inter-normal">Raum 102</p>
+            <p id="beschriftung103" class="inter-normal">Raum 103</p>
+            <p id="beschriftung104" class="inter-normal">Raum 104</p>
         </div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
