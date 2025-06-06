@@ -36,6 +36,15 @@ async function addUser() {
         // timestamp td
         let erstelltELem = document.createElement("td");
 
+        // aktuelle Zeit mit lokaler Zeitzone
+        let datum = new Date();
+        const offset = datum.getTimezoneOffset();
+        datum = new Date(datum.getTime() - (offset*60*1000));
+
+        erstelltELem.innerText = `${datum.toISOString().split('T')[0]} ${datum.toISOString().split('T')[1].split('.')[0]}`;
+
+        rowElem.appendChild(erstelltELem);
+
         // Nutzertyp td
         let typElem = document.createElement("td");
         let typSelect = document.createElement("select");
