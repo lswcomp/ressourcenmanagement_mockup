@@ -18,11 +18,3 @@ th {
 td {
     padding-top: 1vh;
 }
-
-
-#plots {
-    display: flex;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    justify-content: space-between;
-}

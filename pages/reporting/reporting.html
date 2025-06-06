@@ -6,25 +6,69 @@
     <link rel="stylesheet" href="../../base.css">
     <link rel="stylesheet" href="./reporting.css">
     <script defer src="./reporting.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
     <title>Desk Sharing Prototype</title>
 </head>
 <body>
     <header>
-        <h1>Reporting</h1>
         <nav>
+            <img onclick="window.location.href = `../../index.html`" src="../../assets/Logo.svg" alt="Logo">
             <div>
-                <a href="../../index.html">Home</a>
-                <a href="../reporting.html">Reporting</a>
-                <a href="../admin/admin.html">Admin</a>
+                <a href="../buchungen/buchungen.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="../admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="../reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="window.location.href = `../../pages/login/login.html`"><img src="../../assets/Profil.svg" alt=""><img src="../../assets/chevronDown.svg"></button>
             </div>
-            <p id="timestampParagraph">Loading...</p>
         </nav>
     </header>
     <main>
-
+        <div id="plots">
+            <div id="nutzerPlot">
+                <h3 class="inter-bold">Nutzer</h3>
+                <div id="nutzerPiePlot" style="width:600px;height:250px;"></div>
+            </div>
+            <div id="standortPlot">
+                <h3 class="inter-bold">Standorte</h3>
+                <div id="standortPiePlot" style="width:600px;height:250px;"></div>
+            </div>
+            <div id="tagesPlot">
+                <h3 class="inter-bold">Buchungen pro Tag</h3>
+                <div id="tagesPiePlot" style="width:600px;height:250px;"></div>
+            </div>
+        </div>
+        <table>
+            <thead class="inter-bold">
+                <tr id="table-head">
+                    <th>Tag</th>
+                    <th>Zeitstempel</th>
+                    <th>Nutzer</th>
+                    <th>Standort</th>
+                    <th>stockwerk</th>
+                    <th>Ressource</th>
+                </tr>
+            </thead>
+            <tbody class="inter-normal">
+                <tr><td>12.06.2025</td><td>08:54:00</td><td>Lukas Wala</td><td>München</td><td>1.OG</td><td>Tisch 65</td></tr>
+                <tr><td>12.06.2025</td><td>06:50:00</td><td>Moritz Groß</td><td>Hamburg</td><td>5.OG</td><td>Tisch 112</td></tr>
+                <tr><td>09.06.2025</td><td>07:48:00</td><td>Angelika Repp</td><td>Berlin</td><td>12.OG</td><td>Tisch 22</td></tr>
+                <tr><td>08.06.2025</td><td>08:00:00</td><td>Angelika Repp</td><td>Berlin</td><td>12.OG</td><td>Tisch 22</td></tr>
+                <tr><td>08.06.2025</td><td>07:57:00</td><td>Lukas Wala</td><td>München</td><td>1.OG</td><td>Tisch 65</td></tr>
+                <tr><td>08.06.2025</td><td>07:16:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>3.OG</td><td>Tisch 6</td></tr>
+                <tr><td>07.06.2025</td><td>07:31:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>4.OG</td><td>Tisch 6</td></tr>
+                <tr><td>07.06.2025</td><td>06:45:00</td><td>Moritz Groß</td><td>Hamburg</td><td>5.OG</td><td>Tisch 112</td></tr>
+                <tr><td>06.06.2025</td><td>06:49:00</td><td>Moritz Groß</td><td>Hamburg</td><td>5.OG</td><td>Tisch 110</td></tr>
+                <tr><td>05.06.2025</td><td>08:03:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>4.OG</td><td>Tisch 10</td></tr>
+                <tr><td>05.06.2025</td><td>07:29:00</td><td>Angelika Repp</td><td>Hamburg</td><td>13.OG</td><td>Tisch 25</td></tr>
+                <tr><td>05.06.2025</td><td>07:12:00</td><td>Lukas Wala</td><td>München</td><td>1.OG</td><td>Tisch 33</td></tr>
+                <tr><td>04.06.2025</td><td>07:50:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>3.OG</td><td>Tisch 2</td></tr>
+                <tr><td>04.06.2025</td><td>07:32:00</td><td>Angelika Repp</td><td>Berlin</td><td>12.OG</td><td>Tisch 25</td></tr>
+                <tr><td>03.06.2025</td><td>06:45:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>3.OG</td><td>Tisch 2</td></tr>
+                <tr><td>02.06.2025</td><td>08:26:00</td><td>Lukas Wala</td><td>München</td><td>1.OG</td><td>Tisch 48</td></tr>
+                <tr><td>02.06.2025</td><td>07:10:00</td><td>Simon Grewe</td><td>Frankfurt</td><td>3.OG</td><td>Tisch 2</td></tr>
+                <tr><td>02.06.2025</td><td>06:55:00</td><td>Angelika Repp</td><td>Berlin</td><td>12.OG</td><td>Tisch 22</td></tr>
+                <tr><td>02.06.2025</td><td>06:26:00</td><td>Moritz Groß</td><td>Hamburg</td><td>5.OG</td><td>Tisch 110</td></tr>
+            </tbody>
+        </table>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

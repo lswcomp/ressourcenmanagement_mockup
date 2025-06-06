@@ -1,6 +1,6 @@
-const testIndexedDB = window.indexedDB;
+const indexedDB = window.indexedDB;
 
-const testRequest = indexedDB.open("Buchungen", 1);
+const request = indexedDB.open("Buchungen", 1);
 
 request.onerror = function (event) {
     console.error(event);
@@ -22,6 +22,7 @@ request.onsuccess = function () {
     const transaction = db.transaction("buchungen", "readwrite");
 
     const store = transaction.objectStore("buchungen");
+    const nutzerIndex = store.index("nutzer");
 
     store.put({ id: 1, nutzer: "Moritz Groß", standort: "Hamburg", stockwerk: "5.OG", item: "Tisch 110", tag: "02.06.2025", zeitstempel: "06:26:00"});
     store.put({ id: 2, nutzer: "Angelika Repp", standort: "Berlin", stockwerk: "12.OG", item: "Tisch 22", tag: "02.06.2025", zeitstempel: "06:55:00"});
@@ -42,6 +43,12 @@ request.onsuccess = function () {
     store.put({ id: 17, nutzer: "Angelika Repp", standort: "Berlin", stockwerk: "12.OG", item: "Tisch 22", tag: "09.06.2025", zeitstempel: "07:48:00"});
     store.put({ id: 18, nutzer: "Moritz Groß", standort: "Hamburg", stockwerk: "5.OG", item: "Tisch 112", tag: "12.06.2025", zeitstempel: "06:50:00"});
     store.put({ id: 19, nutzer: "Lukas Wala", standort: "München", stockwerk: "1.OG", item: "Tisch 65", tag: "12.06.2025", zeitstempel: "08:54:00"});
+
+    const nutzerQuery = nutzerIndex.getAll(["Lukas Wala"]);
+
+    nutzerQuery.onsuccess = function () {
+        console.log('nutzer query', nutzerQuery.result);
+    };
 
     transaction.oncomplete = function () {
         db.close();

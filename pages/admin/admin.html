@@ -10,21 +10,56 @@
 </head>
 <body>
     <header>
-        <h1>Admin</h1>
         <nav>
+            <img onclick="window.location.href = `../../index.html`" src="../../assets/Logo.svg" alt="Logo">
             <div>
-                <a href="../../index.html">Home</a>
-                <a href="../reporting/reporting.html">Reporting</a>
-                <a href="./admin.html">Admin</a>
+                <a href="../buchungen/buchungen.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="../admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="../reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="window.location.href = `../../pages/login/login.html`"><img src="../../assets/Profil.svg" alt=""><img src="../../assets/chevronDown.svg"></button>
             </div>
-            <p id="timestampParagraph">Loading...</p>
         </nav>
     </header>
     <main>
-
+        <div id="addUser" class="inter-normal">
+            <h3 class="inter-bold">Nutzer hinzufügen</h3>
+            <form action="javascript:addUser();">
+                <label for="username">LDAP-Benutzername</label>
+                <input type="text" name="username" id="username"><br>
+                <label for="vorname">Vorname</label>
+                <input type="text" name="username" id="vorname"><br>
+                <label for="nachname">Nachname</label>
+                <input type="text" name="username" id="nachname"><br>
+                <label for="type">Nutzertyp</label>
+                <select name="type" id="userType">
+                    <option selected="selected" value="standard">Standard</option>
+                    <option value="controlling">Controlling</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="submit" style="margin-top: 5vh;">
+            </form>
+            <div id="fetchingLDAP"></div>
+        </div>
+        <table>
+            <thead class="inter-bold">
+                <tr id="table-head">
+                    <th>ID</th>
+                    <th>Nutzername</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>erstellt</th>
+                    <th>Nutzertyp</th>
+                    <th style="width: 10vw;">Zugriff entfernen</th>
+                </tr>
+            </thead>
+            <tbody class="inter-normal">
+                <tr id="tr1"><td>1</td><td>großmz</td><td>Moritz</td><td>Groß</td><td>01.06.2025 09:12:35</td><td><select><option value="Standard">Standard</option><option value="Controlling">Controlling</option><option selected="selected" value="Admin">Admin</option></select></td><td><button onclick="removeEntry(1)" class="delete">X</button></td></tr>
+                <tr id="tr2"><td>2</td><td>reppaa</td><td>Angelika</td><td>Repp</td><td>01.06.2025 09:13:59</td><td><select><option value="Standard">Standard</option><option value="Controlling">Controlling</option><option selected="selected" value="Admin">Admin</option></select></td><td><button onclick="removeEntry(2)" class="delete">X</button></td></tr>
+                <tr id="tr3"><td>3</td><td>grewesn</td><td>Simon</td><td>Grewe</td><td>01.06.2025 09:14:20</td><td><select><option value="Standard">Standard</option><option value="Controlling">Controlling</option><option selected="selected" value="Admin">Admin</option></select></td><td><button onclick="removeEntry(3)" class="delete">X</button></td></tr>
+                <tr id="tr4"><td>4</td><td>walals</td><td>Lukas</td><td>Wala</td><td>01.06.2025 09:15:47</td><td><select><option value="Standard">Standard</option><option value="Controlling">Controlling</option><option selected="selected" value="Admin">Admin</option></select></td><td><button onclick="removeEntry(4)" class="delete">X</button></td></tr>
+                <tr id="tr5"><td>5</td><td>mustermx</td><td>Max</td><td>Mustermann</td><td>02.06.2025 12:30:01</td><td><select><option selected="selected" value="Standard">Standard</option><option value="Controlling">Controlling</option><option value="Admin">Admin</option></select></td><td><button onclick="removeEntry(5)" class="delete">X</button></td></tr>
+            </tbody>
+        </table>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

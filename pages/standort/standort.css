@@ -4,6 +4,14 @@
     border-radius: 1vh;
     height: 15vh;
     width: 4.5vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.rotSenkrecht > p {
+    text-align: center;
+    user-select: none;
 }
 
 .gruenSenkrecht {
@@ -12,6 +20,15 @@
     border-radius: 1vh;
     height: 15vh;
     width: 4.5vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.gruenSenkrecht > p {
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 .rotWaagrecht {
@@ -20,6 +37,15 @@
     border-radius: 1vh;
     height: 9vh;
     width: 8vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.rotWaagrecht > p {
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 .gruenWaagrecht {
@@ -28,6 +54,15 @@
     border-radius: 1vh;
     height: 9vh;
     width: 8vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.gruenWaagrecht > p {
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 .flexSpace {
@@ -43,6 +78,15 @@
     top: 30%;
     width: 28vw;
     height: 15vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.konferenzTischrot > p {
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 .konferenzTischgruen {
@@ -54,6 +98,15 @@
     top: 30%;
     width: 28vw;
     height: 15vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.konferenzTischgruen > p {
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 #stockwerk {

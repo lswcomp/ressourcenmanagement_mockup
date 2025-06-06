@@ -13,9 +13,9 @@
         <nav>
             <img onclick="window.location.href = `../../index.html`" src="../../assets/Logo.svg" alt="Logo">
             <div>
-                <a href="./index.html" class=".inter-normal">Meine Buchungen</a>
-                <a href="./pages/admin/admin.html" class=".inter-normal">Administration</a>
-                <a href="./pages/reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <a href="../buchungen/buchungen.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="../admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="../reporting/reporting.html" class=".inter-normal">Auswertungen</a>
                 <button id="profilButton" onclick="window.location.href = `../../pages/login/login.html`"><img src="../../assets/Profil.svg" alt=""><img src="../../assets/chevronDown.svg"></button>
             </div>
         </nav>
@@ -32,45 +32,51 @@
         </select>
         <div id="rootContainer">
             <div id="raum101">
-                <div id="tisch22" class="rotSenkrecht"></div>
-                <div id="tisch23" class="rotSenkrecht"></div>
-                <div id="tisch24" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch22')" onmouseleave="deleteHoverText('tisch22')" onclick="swapColor('tisch22')" id="tisch22" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch23')" onmouseleave="deleteHoverText('tisch23')" onclick="swapColor('tisch23')" id="tisch23" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch24')" onmouseleave="deleteHoverText('tisch24')" onclick="swapColor('tisch24')" id="tisch24" class="gruenSenkrecht"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
-                <div id="tisch25" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch25')" onmouseleave="deleteHoverText('tisch25')" onclick="swapColor('tisch25')" id="tisch25" class="gruenSenkrecht"></div>
             </div>
             <div id="raum102">
-                <div id="tisch26" class="rotSenkrecht"></div>
-                <div id="tisch27" class="rotSenkrecht"></div>
-                <div id="tisch28" class="gruenSenkrecht"></div>
-                <div id="tisch29" class="gruenSenkrecht"></div>
-                <div id="tisch30" class="rotSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch26')" onmouseleave="deleteHoverText('tisch26')" onclick="swapColor('tisch26')" id="tisch26" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch27')" onmouseleave="deleteHoverText('tisch27')" onclick="swapColor('tisch27')" id="tisch27" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch28')" onmouseleave="deleteHoverText('tisch28')" onclick="swapColor('tisch28')" id="tisch28" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch29')" onmouseleave="deleteHoverText('tisch29')" onclick="swapColor('tisch29')" id="tisch29" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch30')" onmouseleave="deleteHoverText('tisch30')" onclick="swapColor('tisch30')" id="tisch30" class="gruenSenkrecht"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
-                <div id="tisch31" class="rotSenkrecht"></div>
-                <div id="tisch32" class="gruenSenkrecht"></div>
-                <div id="tisch33" class="gruenSenkrecht"></div>
-                <div id="tisch34" class="rotSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch31')" onmouseleave="deleteHoverText('tisch31')" onclick="swapColor('tisch31')" id="tisch31" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch32')" onmouseleave="deleteHoverText('tisch32')" onclick="swapColor('tisch32')" id="tisch32" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch33')" onmouseleave="deleteHoverText('tisch33')" onclick="swapColor('tisch33')" id="tisch33" class="gruenSenkrecht"></div>
+                <div onmouseover="createHoverText('tisch34')" onmouseleave="deleteHoverText('tisch34')" onclick="swapColor('tisch34')" id="tisch34" class="gruenSenkrecht"></div>
             </div>
             <div id="raum103">
-                <div id="tisch35" class="gruenWaagrecht"></div>
-                <div id="tisch36" class="gruenWaagrecht"></div>
-                <div id="tisch37" class="gruenWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch35')" onmouseleave="deleteHoverText('tisch35')" onclick="swapColorW('tisch35')" id="tisch35" class="gruenWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch36')" onmouseleave="deleteHoverText('tisch36')" onclick="swapColorW('tisch36')" id="tisch36" class="gruenWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch37')" onmouseleave="deleteHoverText('tisch37')" onclick="swapColorW('tisch37')" id="tisch37" class="gruenWaagrecht"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
                 <div class="flexSpace"></div>
-                <div id="tisch38" class="gruenWaagrecht"></div>
-                <div id="tisch39" class="gruenWaagrecht"></div>
-                <div id="tisch40" class="rotWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch38')" onmouseleave="deleteHoverText('tisch38')" onclick="swapColorW('tisch38')" id="tisch38" class="gruenWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch39')" onmouseleave="deleteHoverText('tisch39')" onclick="swapColorW('tisch39')" id="tisch39" class="gruenWaagrecht"></div>
+                <div onmouseover="createHoverTextW('tisch40')" onmouseleave="deleteHoverText('tisch40')" onclick="swapColorW('tisch40')" id="tisch40" class="gruenWaagrecht"></div>
             </div>
             <div id="raum104">
-                <div class="konferenzTischrot"></div>
+                <div
+                  onmouseover="createHoverTextK('konferenzTisch')"
+                  onmouseleave="deleteHoverText('konferenzTisch')"
+                  onclick="swapColorK('konferenzTisch')"
+                  class="konferenzTischgruen"
+                  id="konferenzTisch"
+                ></div>
                 <div id="leinwand"></div>
             </div>
             <p id="beschriftung101" class="inter-normal">Raum 101</p>

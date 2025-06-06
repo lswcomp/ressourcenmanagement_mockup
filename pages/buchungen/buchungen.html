@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../base.css">
+    <link rel="stylesheet" href="./buchungen.css">
+    <script defer src="./buchungen.js"></script>
+    <title>Desk Sharing Prototype</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img onclick="window.location.href = `../../index.html`" src="../../assets/Logo.svg" alt="Logo">
+            <div>
+                <a href="../buchungen/buchungen.html" class=".inter-normal">Meine Buchungen</a>
+                <a href="../admin/admin.html" class=".inter-normal">Administration</a>
+                <a href="../reporting/reporting.html" class=".inter-normal">Auswertungen</a>
+                <button id="profilButton" onclick="window.location.href = `../../pages/login/login.html`"><img src="../../assets/Profil.svg" alt=""><img src="../../assets/chevronDown.svg"></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h3 style="text-align: left; margin-left: 5vw;" class="inter-normal"><strong>Nutzer:</strong> Lukas Wala</h3>
+        <table>
+            <thead class="inter-bold">
+                <tr id="table-head">
+                    <th>Tag</th>
+                    <th>Zeitstempel</th>
+                    <th>Standort</th>
+                    <th>stockwerk</th>
+                    <th>Ressource</th>
+                </tr>
+            </thead>
+            <tbody class="inter-normal">
+                <tr><td>12.06.2025</td><td>08:54:00</td><td>München</td><td>1.OG</td><td>Tisch 65</td></tr>
+                <tr><td>08.06.2025</td><td>07:57:00</td><td>München</td><td>1.OG</td><td>Tisch 65</td></tr>
+                <tr><td>05.06.2025</td><td>07:12:00</td><td>München</td><td>1.OG</td><td>Tisch 33</td></tr>
+                <tr><td>02.06.2025</td><td>08:26:00</td><td>München</td><td>1.OG</td><td>Tisch 48</td></tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
